@@ -1,18 +1,26 @@
-import { Component } from '@angular/core';
-import { General } from '../general.service';
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-new-user',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './new-user.component.html',
   styleUrl: './new-user.component.css'
 })
 export class NewUserComponent {
 
-  constructor(private servicioGeneral: General) {}
+  @Input({required: true}) userName!: string;
+
+  enteredUserName: string = '';
+  loggedIn: boolean = false;
 
   createUser() {
-    this.servicioGeneral.addUser();
+    if(this.enteredUserName !== '') {
+      this.loggedIn = true;
+    } else {
+      this.loggedIn = false;
+    }
+    console.log(this.loggedIn);
   }
 
 }
