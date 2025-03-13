@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class MeterdatosComponent {
 
+  testFinalizado() {
+    alert('Has finalizado el test! Tu puntuación es de ' + Math.floor(Math.random() * 10));
+  }
 }
