@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NewUserComponent } from './new-user/new-user.component';
+import { HeaderComponent } from './header/header.component';
+import { CuerpoComponent } from './cuerpo/cuerpo.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NewUserComponent],
+  imports: [RouterOutlet, HeaderComponent, CuerpoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'proy-practicas-jisap';
+  
 }

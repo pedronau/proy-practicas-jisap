@@ -1,0 +1,10 @@
+<section id="cuerpo">
+
+    @if (buttonPressed === false) {
+        <h2>Haz click cuando estés listo.</h2>
+        <button type="button" (click)="botonPressed()">Comenzar</button>
+    } @else {
+        <app-meterdatos></app-meterdatos>
+    }
+    
+</section>
