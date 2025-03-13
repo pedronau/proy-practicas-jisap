@@ -3,30 +3,16 @@ import { Injectable } from "@angular/core";
 @Injectable({providedIn: 'root'})
 
 export class General {
-    private usuario = [{
-        id: '',
-        userName: '',
-    }];
 
-    constructor() {
-        const users = localStorage.getItem('users');
-        if(users) {
-            this.usuario = JSON.parse(users);
-        }
-    }
+    private usuario: string = '';
 
-    addUser(usuario: []) {
-        this.usuario.push({
-            id: new Date().getTime().toString(),
-            userName: '',
-        });
-        this.addLocal();
+
+    addUser() {
+        this.usuario = 'paco';
         console.log('Estoy funcionando');
     }
 
-    addLocal() {
-        localStorage.setItem('users', JSON.stringify(this.usuario));
-    }
+
 
 }
 

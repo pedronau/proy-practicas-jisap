@@ -12,7 +12,7 @@ export class NewUserComponent {
   constructor(private servicioGeneral: General) {}
 
   createUser() {
-    this.servicioGeneral.addUser;
+    this.servicioGeneral.addUser();
   }
 
 }
